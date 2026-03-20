@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace Comparador_Console
 {
-    public class Registro
+    public class RegistroGenerico
     {
-        public string Id { get; set;  } 
-        public string GovernmentId { get; set;  } = string.Empty;
-        public string Cnpj { get; set;  } = string.Empty;
+        public Dictionary<string, string> Campos { get; set; }
+        public RegistroGenerico() => Campos = new Dictionary<string, string>();
     }
+
+    //public class Registro
+    //{
+    //    public string Id { get; set;  } 
+    //    public string GovernmentId { get; set;  } = string.Empty;
+    //    public string Cnpj { get; set;  } = string.Empty;
+    //}
 }

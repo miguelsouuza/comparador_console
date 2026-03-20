@@ -12,16 +12,11 @@ namespace Comparador_Console
         [STAThread]
         static void Main(string[] args)
         {
-            //var basePath = Directory.GetCurrentDirectory();
-            //var projetoPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\"));
-
-            //var caminhoA = Path.Combine(projetoPath, "Arquivos", "A.csv");
-            //var caminhoB = Path.Combine(projetoPath, "Arquivos", "B.csv");
             Console.WriteLine("Selecione o arquivo A:");
-            var caminhoA= ExcelService.SelecionarArquivo("Selecione o arquivo da Base A");
+            var caminhoA = ExcelService.SelecionarArquivo("Selecione o arquivo da Base A");
 
             Console.WriteLine("Selecione o arquivo B:");
-            var caminhoB= ExcelService.SelecionarArquivo("Selecione o arquivo da Base B");
+            var caminhoB = ExcelService.SelecionarArquivo("Selecione o arquivo da Base B");
 
             if (string.IsNullOrEmpty(caminhoA) || string.IsNullOrEmpty(caminhoB))
             {
@@ -29,91 +24,70 @@ namespace Comparador_Console
                 return;
             }
 
-            var baseA = CarregarArquivo(caminhoA);
-            var baseB = CarregarArquivo(caminhoB);    
+
+            var baseA = ExcelService.CarregarArquivoGenerico(caminhoA);
+            var baseB = ExcelService.CarregarArquivoGenerico(caminhoB);
+
+            string colunaId = "Id";
+
+            var colunasComparar = new List<string>
+            {
+                "GovernmentId",
+                "Cnpj"
+            };
+
             var diferencas = new List<Diferenca>();
 
-            var dictB = baseB.ToDictionary(x => x.Id);
+            var dictB = baseB.ToDictionary(x => x.Campos[colunaId]);
 
             foreach (var itemA in baseA)
             {
-                if (!dictB.ContainsKey(itemA.Id))
+                var id = itemA.Campos[colunaId];
+
+                if (!dictB.ContainsKey(id))
                 {
-                    Console.WriteLine($"Só existe na base A: {itemA.Id}");
+                    Console.WriteLine($"[SÓ NA A] ID: {id}");
                     continue;
                 }
 
-                var itemB = dictB[itemA.Id];
+                var itemB = dictB[id];
 
-                if (itemA.GovernmentId != itemB.GovernmentId)
+                foreach (var coluna in colunasComparar)
                 {
-                    Console.WriteLine(
-                        $" - GovernmentId | A: {itemA.GovernmentId} | B: {itemB.GovernmentId}"
-                    );
-                    diferencas.Add(new Diferenca
-                    {
-                        Id=itemA.Id,
-                        Campo = "GovernmentId",
-                        ValorA= itemA.GovernmentId,
-                        ValorB = itemB.GovernmentId,
-                    });
-                }
+                    var valorA = itemA.Campos.ContainsKey(coluna) ? itemA.Campos[coluna] : "";
+                    var valorB = itemB.Campos.ContainsKey(coluna) ? itemB.Campos[coluna] : "";
 
-                if (itemA.Cnpj != itemB.Cnpj)
-                {
-                    if (itemA.Cnpj != itemB.Cnpj)
+                    if (valorA != valorB)
                     {
                         Console.WriteLine(
-                            $" - CNPJ         | A: {itemA.Cnpj} | B: {itemB.Cnpj}"
+                            $"[DIVERGENTE] ID: {id} | Campo: {coluna} | A: {valorA} | B: {valorB}"
                         );
                     }
                     diferencas.Add(new Diferenca
                     {
-                        Id = itemA.Cnpj,
-                        Campo = "CNPJ",
-                        ValorA = itemA.Cnpj,
-                        ValorB = itemB.Cnpj,
+                        Id = id,
+                        Campo = coluna,
+                        ValorA = valorA,
+                        ValorB = valorB
                     });
                 }
             }
-
-            var idsA = baseA.Select(x => x.Id);
-            var idsB = baseB.Select(x => x.Id);
+            var idsA = baseA.Select(x => x.Campos["Id"]);
+            var idsB = baseB.Select(x => x.Campos["Id"]);
 
             var soNaB = idsB.Except(idsA);
 
             foreach (var id in soNaB)
             {
-                Console.WriteLine($"Só existe na base B: {id}");
+                Console.WriteLine($"[SÓ NA B] ID: {id}");
             }
-            
+
             ExcelService.ExportarParaExcel(diferencas);
 
             Console.WriteLine("\n✔ Comparação finalizada!");
             Console.WriteLine($"Total de divergências: {diferencas.Count}");
 
             Console.ReadLine();
-        }
-        static List<Registro> CarregarArquivo(string caminho)
-        {
-            var linhas = File.ReadAllLines(caminho);
-            var lista = new List<Registro>();
-
-            foreach (var linha in linhas.Skip(1))
-            {
-                var colunas = linha.Split(';'); // muda pra ',' se precisar
-
-                var registro = new Registro
-                {
-                    Id = colunas[0],
-                    GovernmentId = colunas[1],
-                    Cnpj = colunas[2]
-                };
-
-                lista.Add(registro);
-            }
-
-            return lista;
         }
     }
 }
