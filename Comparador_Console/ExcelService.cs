@@ -3,6 +3,8 @@ using OfficeOpenXml;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace Comparador_Console
 {
@@ -31,10 +33,36 @@ namespace Comparador_Console
                     worksheet.Cells[linha, 4].Value = d.ValorB;
                     linha++;
                 }
-            
-                var file = new FileInfo("E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Arquivos\\ResultadoComparacao.xlsx");
+                var basePath = Directory.GetCurrentDirectory();
+                var projetoPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\"));
+                var caminhoResultado = Path.Combine(projetoPath, "Arquivos", "ResultadoComparacao.xlsx");
+                var file = new FileInfo(caminhoResultado);
                 package.SaveAs(file);
             }
+        }
+
+        public static string SelecionarArquivo(string titulo)
+        {
+            string result = string.Empty;
+            var t = new Thread(() =>
+            {
+            
+            using (var dialog = new OpenFileDialog())
+            {
+                dialog.Title = titulo;
+                dialog.Filter = "Arquivos (*.csv;*.xlsx)|*.csv;*.xlsx|Todos (*.*)|*.*";
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    result = dialog.FileName;
+                }
+
+            }
+            });
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+            t.Join();
+            return result;
         }
     }
 }

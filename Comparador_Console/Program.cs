@@ -9,13 +9,26 @@ namespace Comparador_Console
 {
     internal class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
-            var basePath = Directory.GetCurrentDirectory();
-            var projetoPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\"));
+            //var basePath = Directory.GetCurrentDirectory();
+            //var projetoPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\"));
 
-            var caminhoA = Path.Combine(projetoPath, "Arquivos", "A.csv");
-            var caminhoB = Path.Combine(projetoPath, "Arquivos", "B.csv");
+            //var caminhoA = Path.Combine(projetoPath, "Arquivos", "A.csv");
+            //var caminhoB = Path.Combine(projetoPath, "Arquivos", "B.csv");
+            Console.WriteLine("Selecione o arquivo A:");
+            var caminhoA= ExcelService.SelecionarArquivo("Selecione o arquivo da Base A");
+
+            Console.WriteLine("Selecione o arquivo B:");
+            var caminhoB= ExcelService.SelecionarArquivo("Selecione o arquivo da Base B");
+
+            if (string.IsNullOrEmpty(caminhoA) || string.IsNullOrEmpty(caminhoB))
+            {
+                Console.WriteLine("Arquivo não selecionado.");
+                return;
+            }
+
             var baseA = CarregarArquivo(caminhoA);
             var baseB = CarregarArquivo(caminhoB);    
             var diferencas = new List<Diferenca>();
