@@ -11,8 +11,13 @@ namespace Comparador_Console
     {
         static void Main(string[] args)
         {
-            var baseA = CarregarArquivo("C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\Projeto\\Comparador_Console\\Comparador_Console\\Comparador_Console\\Arquivos\\A.csv");
-            var baseB = CarregarArquivo("C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\Projeto\\Comparador_Console\\Comparador_Console\\Comparador_Console\\Arquivos\\B.csv");
+            var basePath = Directory.GetCurrentDirectory();
+            var projetoPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\"));
+
+            var caminhoA = Path.Combine(projetoPath, "Arquivos", "A.csv");
+            var caminhoB = Path.Combine(projetoPath, "Arquivos", "B.csv");
+            var baseA = CarregarArquivo(caminhoA);
+            var baseB = CarregarArquivo(caminhoB);    
             var diferencas = new List<Diferenca>();
 
             var dictB = baseB.ToDictionary(x => x.Id);
@@ -68,7 +73,7 @@ namespace Comparador_Console
             {
                 Console.WriteLine($"Só existe na base B: {id}");
             }
-
+            
             ExcelService.ExportarParaExcel(diferencas);
 
             Console.WriteLine("\n✔ Comparação finalizada!");

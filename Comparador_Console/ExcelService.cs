@@ -10,7 +10,8 @@ namespace Comparador_Console
     {
         public static void ExportarParaExcel(List<Diferenca> diferencas)
         {
-            ExcelPackage.License = new OfficeOpenXml.License.NonCommercialLicense();
+            ExcelPackage.License.SetNonCommercialOrganization("ComparadorConsole");
+
             using (var package = new ExcelPackage())
             {
                 var worksheet = package.Workbook.Worksheets.Add("Diferencas");
@@ -30,8 +31,8 @@ namespace Comparador_Console
                     worksheet.Cells[linha, 4].Value = d.ValorB;
                     linha++;
                 }
-
-                var file = new FileInfo("ResultadoComparacao.xlsx");
+            
+                var file = new FileInfo("E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Arquivos\\ResultadoComparacao.xlsx");
                 package.SaveAs(file);
             }
         }
