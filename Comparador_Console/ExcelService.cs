@@ -36,7 +36,10 @@ namespace Comparador_Console
 
                 // detectar delimitador (',' ou ';')
                 var delimiter = DetectarSeparador(linhas[0]);
-                var headers = linhas[0].Split(delimiter);
+                var headers = linhas[0]
+                                .Split(delimiter)
+                                .Select(h => Normalizar(h))
+                                .ToArray();
 
                 foreach (var linha in linhas.Skip(1))
                 {
@@ -61,7 +64,7 @@ namespace Comparador_Console
 
                 var headers = new List<string>();
                 for (int col = 1; col <= colunas; col++)
-                    headers.Add(ws.Cells[1, col].Text);
+                    headers.Add(Normalizar(ws.Cells[1, col].Text));
 
                 for (int lin = 2; lin <= linhas; lin++)
                 {
@@ -70,7 +73,7 @@ namespace Comparador_Console
                     {
                         var nomeColuna = headers[col - 1];
                         var valor = ws.Cells[lin, col].Text;
-                        registro.Campos[nomeColuna] = valor;
+                        registro.Campos[Normalizar(nomeColuna)] = valor?.Trim() ?? "";
                     }
                     lista.Add(registro);
                 }
@@ -86,7 +89,11 @@ namespace Comparador_Console
             var linhas = File.ReadAllLines(caminho);
             var separador = DetectarSeparador(linhas[0]);
             // cabeçalho
-            var headers = linhas[0].Split(separador);
+
+            var headers = linhas[0]
+                .Split(separador)
+                .Select(h => Normalizar(h))
+                .ToArray();
 
             for (int i = 1; i < linhas.Length; i++)
             {
@@ -137,6 +144,15 @@ namespace Comparador_Console
                     throw new Exception("Formato de arquivo não suportado");
             }
         }
+
+        public static string Normalizar(string texto)
+        {
+            return texto?
+                .Replace("\uFEFF", "") // remove BOM
+                .Trim()
+                .ToUpper() ?? "";
+        }
+
         //public static List<Registro> CarregarArquivoCsv(string caminho)
         //{
         //    var linhas = File.ReadAllLines(caminho);
@@ -189,34 +205,98 @@ namespace Comparador_Console
         //    return lista;
         //}
 
-        public static void ExportarParaExcel(List<Diferenca> diferencas)
+        public static void ExportarParaExcel(List<Diferenca> diferencas, List<RegistroGenerico> apenasA, List<RegistroGenerico> apenasB)
         {
             ExcelPackage.License.SetNonCommercialOrganization("ComparadorConsole");
 
             using (var package = new ExcelPackage())
             {
-                var worksheet = package.Workbook.Worksheets.Add("Diferencas");
+                // 🔹 Aba Apenas_A
+                var abaA = package.Workbook.Worksheets.Add("Apenas_A");
+                PreencherAbaGenerica(abaA, apenasA);
 
-                worksheet.Cells[1, 1].Value = "ID";
-                worksheet.Cells[1, 2].Value = "Campo";
-                worksheet.Cells[1, 3].Value = "Valor A";
-                worksheet.Cells[1, 4].Value = "Valor B";
+                // 🔹 Aba Apenas_B
+                var abaB = package.Workbook.Worksheets.Add("Apenas_B");
+                PreencherAbaGenerica(abaB, apenasB);
 
-                int linha = 2;
+                // 🔹 Aba Diferenças
+                var abaDif = package.Workbook.Worksheets.Add("Diferenças");
+                PreencherAbaDiferencas(abaDif, diferencas);
 
-                foreach (var d in diferencas)
-                {
-                    worksheet.Cells[linha, 1].Value = d.Id;
-                    worksheet.Cells[linha, 2].Value = d.Campo;
-                    worksheet.Cells[linha, 3].Value = d.ValorA;
-                    worksheet.Cells[linha, 4].Value = d.ValorB;
-                    linha++;
-                }
                 var basePath = Directory.GetCurrentDirectory();
                 var projetoPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\"));
                 var caminhoResultado = Path.Combine(projetoPath, "Arquivos", "ResultadoComparacao.xlsx");
                 var file = new FileInfo(caminhoResultado);
-                package.SaveAs(file);
+                if (File.Exists(caminhoResultado) && ArquivoEmUso(caminhoResultado))
+                {
+                    Console.WriteLine("O arquivo de resultado já está aberto. Feche-o para salvar a nova comparação.");
+                    return;
+                }
+                    package.SaveAs(file);                
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = caminhoResultado,
+                        UseShellExecute = true
+                    });
+            }
+        }
+
+        static void PreencherAbaGenerica(ExcelWorksheet ws, List<RegistroGenerico> dados)
+        {
+            if (!dados.Any()) return;
+
+            var colunas = dados[0].Campos.Keys.ToList();
+
+            // Cabeçalho
+            for (int i = 0; i < colunas.Count; i++)
+            {
+                ws.Cells[1, i + 1].Value = colunas[i];
+            }
+
+            int linha = 2;
+
+            foreach (var item in dados)
+            {
+                for (int col = 0; col < colunas.Count; col++)
+                {
+                    var nomeColuna = colunas[col];
+                    ws.Cells[linha, col + 1].Value =
+                        item.Campos.ContainsKey(nomeColuna) ? item.Campos[nomeColuna] : "";
+                }
+                linha++;
+            }
+        }
+
+        static void PreencherAbaDiferencas(ExcelWorksheet ws, List<Diferenca> difs)
+        {
+            ws.Cells[1, 1].Value = "ID";
+            ws.Cells[1, 2].Value = "Campo";
+            ws.Cells[1, 3].Value = "Valor A";
+            ws.Cells[1, 4].Value = "Valor B";
+
+            int linha = 2;
+
+            foreach (var d in difs)
+            {
+                ws.Cells[linha, 1].Value = d.Id;
+                ws.Cells[linha, 2].Value = d.Campo;
+                ws.Cells[linha, 3].Value = d.ValorA;
+                ws.Cells[linha, 4].Value = d.ValorB;
+                linha++;
+            }
+        }
+        static bool ArquivoEmUso(string caminho)
+        {
+            try
+            {
+                using (var stream = new FileStream(caminho, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None))
+                {
+                    return false; // conseguiu abrir = NÃO está em uso
+                }
+            }
+            catch (IOException)
+            {
+                return true; // está em uso
             }
         }
 

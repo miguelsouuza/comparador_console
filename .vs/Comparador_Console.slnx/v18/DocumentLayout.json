@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\",
+  "WorkspaceRootPath": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|e:\\documentos\\estudo\\comparador\\comparador_console\\comparador_console\\excelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|solutionrelative:comparador_console\\excelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|E:\\Documentos\\Estudo\\Comparador\\comparador_console\\comparador_console\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|solutionrelative:comparador_console\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|E:\\Documentos\\Estudo\\Comparador\\comparador_console\\comparador_console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|c:\\users\\msilva\\documents\\estudos\\documentos de estudo\\comparador_console\\comparador_console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|solutionrelative:comparador_console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|E:\\Documentos\\Estudo\\Comparador\\comparador_console\\comparador_console\\diferenca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\comparador_console\\excelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|solutionrelative:comparador_console\\excelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\comparador_console\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|solutionrelative:comparador_console\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\comparador_console\\diferenca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|solutionrelative:comparador_console\\diferenca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|E:\\Documentos\\Estudo\\Comparador\\comparador_console\\comparador_console\\arquivos\\b.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\comparador_console\\arquivos\\b.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|solutionrelative:comparador_console\\arquivos\\b.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|E:\\Documentos\\Estudo\\Comparador\\comparador_console\\comparador_console\\arquivos\\a.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\comparador_console\\arquivos\\a.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{F1A5AFD2-50EC-42C9-BF4C-EAE95F120F99}|Comparador_Console\\Comparador_Console.csproj|solutionrelative:comparador_console\\arquivos\\a.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
@@ -34,17 +34,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 11,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ExcelService.cs",
-              "DocumentMoniker": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\ExcelService.cs",
+              "DocumentMoniker": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\ExcelService.cs",
               "RelativeDocumentMoniker": "Comparador_Console\\ExcelService.cs",
-              "ToolTip": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\ExcelService.cs*",
-              "RelativeToolTip": "Comparador_Console\\ExcelService.cs*",
-              "ViewState": "AgIAAC8AAAAAAAAAAAD4vywAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\ExcelService.cs",
+              "RelativeToolTip": "Comparador_Console\\ExcelService.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAADwv5UAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T14:52:56.03Z",
               "EditorCaption": ""
@@ -53,63 +77,59 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Diferenca.cs",
-              "DocumentMoniker": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Diferenca.cs",
+              "DocumentMoniker": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\Diferenca.cs",
               "RelativeDocumentMoniker": "Comparador_Console\\Diferenca.cs",
-              "ToolTip": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Diferenca.cs",
+              "ToolTip": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\Diferenca.cs",
               "RelativeToolTip": "Comparador_Console\\Diferenca.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T14:42:04.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T14:42:04.197Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "A.csv",
-              "DocumentMoniker": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Arquivos\\A.csv",
+              "DocumentMoniker": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\Arquivos\\A.csv",
               "RelativeDocumentMoniker": "Comparador_Console\\Arquivos\\A.csv",
-              "ToolTip": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Arquivos\\A.csv",
+              "ToolTip": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\Arquivos\\A.csv",
               "RelativeToolTip": "Comparador_Console\\Arquivos\\A.csv",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2026-03-17T14:31:44.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T14:31:44.555Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "B.csv",
-              "DocumentMoniker": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Arquivos\\B.csv",
+              "DocumentMoniker": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\Arquivos\\B.csv",
               "RelativeDocumentMoniker": "Comparador_Console\\Arquivos\\B.csv",
-              "ToolTip": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Arquivos\\B.csv",
+              "ToolTip": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\Arquivos\\B.csv",
               "RelativeToolTip": "Comparador_Console\\Arquivos\\B.csv",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2026-03-17T14:31:04.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Registro.cs",
-              "DocumentMoniker": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Registro.cs",
-              "RelativeDocumentMoniker": "Comparador_Console\\Registro.cs",
-              "ToolTip": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Registro.cs",
-              "RelativeToolTip": "Comparador_Console\\Registro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T12:48:06.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T14:31:04.676Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Registro.cs",
+              "DocumentMoniker": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\Registro.cs",
+              "RelativeDocumentMoniker": "Comparador_Console\\Registro.cs",
+              "ToolTip": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\Registro.cs",
+              "RelativeToolTip": "Comparador_Console\\Registro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T12:48:06.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\Program.cs",
               "RelativeDocumentMoniker": "Comparador_Console\\Program.cs",
-              "ToolTip": "E:\\Documentos\\Estudo\\Comparador\\comparador_console\\Comparador_Console\\Program.cs",
+              "ToolTip": "C:\\Users\\MSilva\\Documents\\Estudos\\Documentos de estudo\\comparador_console\\Comparador_Console\\Program.cs",
               "RelativeToolTip": "Comparador_Console\\Program.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAGcAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T12:46:06.905Z",
               "EditorCaption": ""

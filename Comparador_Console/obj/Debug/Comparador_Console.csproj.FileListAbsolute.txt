@@ -46,3 +46,27 @@ E:\Documentos\Estudo\Comparador\comparador_console\Comparador_Console\obj\Debug\
 E:\Documentos\Estudo\Comparador\comparador_console\Comparador_Console\obj\Debug\Comparad.B7CB01CC.Up2Date
 E:\Documentos\Estudo\Comparador\comparador_console\Comparador_Console\obj\Debug\Comparador_Console.exe
 E:\Documentos\Estudo\Comparador\comparador_console\Comparador_Console\obj\Debug\Comparador_Console.pdb
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\Comparador_Console.exe.config
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\Comparador_Console.exe
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\Comparador_Console.pdb
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\EPPlus.dll
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.Buffers.dll
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.Memory.dll
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\EPPlus.xml
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.Buffers.xml
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.Memory.xml
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\obj\Debug\Comparador_Console.csproj.AssemblyReference.cache
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\obj\Debug\Comparador_Console.csproj.CoreCompileInputs.cache
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\obj\Debug\Comparad.B7CB01CC.Up2Date
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\obj\Debug\Comparador_Console.exe
+C:\Users\MSilva\Documents\Estudos\Documentos de estudo\comparador_console\Comparador_Console\obj\Debug\Comparador_Console.pdb
